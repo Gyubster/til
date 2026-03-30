@@ -5,7 +5,7 @@ title: "Fitness"
 
 # Fitness
 
-체력 관리 & 운동 (스탯: VIT)
+체력 관리 & 운동
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'fitness'" %}
 {% for post in posts %}

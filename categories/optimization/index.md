@@ -5,7 +5,7 @@ title: "Optimization"
 
 # Optimization
 
-성능 최적화 & 튜닝 (스탯: OPT)
+성능 최적화 & 튜닝
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'optimization'" %}
 {% for post in posts %}

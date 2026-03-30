@@ -5,7 +5,7 @@ title: "System Design"
 
 # System Design
 
-시스템 설계 & 아키텍처 (스탯: SYS)
+시스템 설계 & 아키텍처
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'system-design'" %}
 {% for post in posts %}

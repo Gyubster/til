@@ -5,7 +5,7 @@ title: "Debugging"
 
 # Debugging
 
-디버깅 & 장애 대응 (스탯: DBG)
+디버깅 & 장애 대응
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'debugging'" %}
 {% for post in posts %}

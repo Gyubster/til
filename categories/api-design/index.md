@@ -5,7 +5,7 @@ title: "API Design"
 
 # API Design
 
-API 설계 & 마이크로서비스 (스탯: API)
+API 설계 & 마이크로서비스
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'api-design'" %}
 {% for post in posts %}
