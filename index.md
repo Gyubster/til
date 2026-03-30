@@ -9,7 +9,7 @@ title: "심규보 TIL"
 
 ## 카테고리
 
-{% assign categories = "algorithm,system-design,api-design,optimization,debugging,cs-fundamentals,career,fitness" | split: "," %}
+{% assign categories = "algorithm,system-design,api-design,optimization,debugging,cs-fundamentals,engineering-notes,career,fitness" | split: "," %}
 
 {% for cat in categories %}
 ### [{{ cat | replace: "-", " " | capitalize }}](/til/categories/{{ cat }}/)

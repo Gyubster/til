@@ -25,6 +25,7 @@
 | [Debugging](categories/debugging) | 디버깅 & 장애 대응 |
 | [CS Fundamentals](categories/cs-fundamentals) | CS 기초 & 이론 |
 | [Career](categories/career) | 커리어 & 면접 준비 |
+| [Engineering Notes](categories/engineering-notes) | 실무 문제 분석, 설계 고민, 고도화 방향 |
 | [Fitness](categories/fitness) | 체력 관리 & 운동 |
 
 ## 블로그
