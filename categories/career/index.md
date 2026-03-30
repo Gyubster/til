@@ -5,7 +5,7 @@ title: "Career"
 
 # Career
 
-커리어 & 면접 준비 (스탯: CHA)
+커리어 & 면접 준비
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'career'" %}
 {% for post in posts %}

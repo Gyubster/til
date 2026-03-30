@@ -5,7 +5,7 @@ title: "Algorithm"
 
 # Algorithm
 
-알고리즘 & 자료구조 (스탯: ALG)
+알고리즘 & 자료구조
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'algorithm'" %}
 {% for post in posts %}

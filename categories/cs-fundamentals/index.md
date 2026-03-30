@@ -5,7 +5,7 @@ title: "CS Fundamentals"
 
 # CS Fundamentals
 
-CS 기초 & 이론 (스탯: INT)
+CS 기초 & 이론
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'cs-fundamentals'" %}
 {% for post in posts %}
