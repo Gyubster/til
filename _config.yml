@@ -1,0 +1,23 @@
+title: "심규보 TIL"
+description: "Today I Learned — 백엔드 엔지니어의 성장 기록"
+url: "https://gyubster.github.io"
+baseurl: "/til"
+theme: minima
+markdown: kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
