@@ -27,7 +27,17 @@ theme_mode:
 toc: true
 
 comments:
-  provider:
+  provider: giscus
+  giscus:
+    repo: Gyubster/til
+    repo_id:
+    category: General
+    category_id:
+    mapping: pathname
+    strict: 0
+    input_position: bottom
+    lang: ko
+    reactions_enabled: 1
 
 paginate: 10
 
