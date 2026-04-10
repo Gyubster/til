@@ -1,12 +1,8 @@
 ---
-layout: post
 title: "Two Pointers 패턴 - 3Sum 문제 풀이"
 date: 2026-03-30
-categories: algorithm
-tags:
-  - leetcode
-  - two-pointers
-  - medium
+categories: [Algorithm]
+tags: [leetcode, two-pointers, medium]
 ---
 
 ## 오늘 배운 것
