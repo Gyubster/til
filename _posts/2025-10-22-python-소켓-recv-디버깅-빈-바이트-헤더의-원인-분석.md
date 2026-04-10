@@ -1,6 +1,6 @@
 ---
 title: "Python 소켓 recv() 디버깅 - 빈 바이트 헤더의 원인 분석"
-date: 2026-05-06
+date: 2025-10-22
 categories: [CS Fundamentals]
 tags: [socket, python, networking, tcp, debugging]
 mermaid: true

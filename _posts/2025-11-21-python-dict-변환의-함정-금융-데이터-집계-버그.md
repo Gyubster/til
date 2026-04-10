@@ -1,6 +1,6 @@
 ---
 title: "Python dict() 변환의 함정 - 금융 데이터 집계 버그"
-date: 2026-05-06
+date: 2025-11-21
 categories: [Debugging]
 tags: [python, django, orm, data-integrity]
 mermaid: true
