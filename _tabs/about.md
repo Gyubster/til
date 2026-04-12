@@ -73,4 +73,4 @@ order: 4
 
 - [GitHub](https://github.com/Gyubster)
 - [LinkedIn](https://www.linkedin.com/in/규보-심-268617208)
-- kyunbo0910@gmail.com
+- kyunbo0910@naver.com
