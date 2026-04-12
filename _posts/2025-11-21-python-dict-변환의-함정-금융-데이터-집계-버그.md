@@ -14,7 +14,7 @@ mermaid: true
 -- 자동심사 (공공 마이데이터)
 "HEALTH_INSURANCE": "0,0,0,0,0,0,0,0,-56460,163070,163070,0,0,0,..."
 
--- 가심사 (카카오페이 스크래핑)
+-- 가심사 (제휴 페이 스크래핑)
 "HEALTH_INSURANCE": "0,154470,154470,154470,154470,...,163070,163070,..."
 ```
 
@@ -75,7 +75,7 @@ def health_insurance_payments(self):
 ```mermaid
 flowchart TD
     subgraph da["하나의 대출 신청"]
-        A["가심사 제출<br/>(카카오페이 스크래핑)"]
+        A["가심사 제출<br/>(제휴 페이 스크래핑)"]
         B["자동심사 제출<br/>(공공 마이데이터)"]
     end
     subgraph payments["Payment 테이블"]
