@@ -72,5 +72,5 @@ order: 4
 ### 연락처
 
 - [GitHub](https://github.com/Gyubster)
-- [LinkedIn](https://www.linkedin.com/in/gyubo-shim)
+- [LinkedIn](https://www.linkedin.com/in/규보-심-268617208)
 - kyunbo0910@gmail.com
