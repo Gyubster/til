@@ -1,0 +1,34 @@
+// 본문 폰트 사이즈 축소
+.post-content {
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+}
+
+// 사이드바 폰트
+.sidebar {
+  .site-title {
+    font-size: 1.3rem;
+  }
+  .site-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+// 홈 포스트 목록
+.post-preview {
+  .post-content {
+    font-size: 0.9rem;
+  }
+}
