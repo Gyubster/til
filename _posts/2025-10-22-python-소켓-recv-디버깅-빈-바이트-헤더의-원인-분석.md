@@ -87,8 +87,8 @@ flowchart TD
         S3["슬롯 3: 사용중"]
         S4["슬롯 4: 사용중"]
     end
-    A["5번째 연결 요청"] --> B["TCP 핸드셰이크 수용<br/>(connect 성공)"]
-    B --> C["즉시 FIN 전송<br/>(연결 종료)"]
+    A["5번째 연결 요청"] --> B["TCP 핸드셰이크 수용<br>(connect 성공)"]
+    B --> C["즉시 FIN 전송<br>(연결 종료)"]
     C --> D["클라이언트 recv() → b''"]
     style D fill:#ff6b6b,stroke:#333,color:#fff
 ```
@@ -185,16 +185,16 @@ if len(header) < 9:
 ```mermaid
 flowchart TD
     A["간헐적 소켓 에러 발생"] --> B{"recv()가 b'' 반환?"}
-    B -->|Yes| C["상대방이 FIN 전송<br/>(연결 종료)"]
-    B -->|No| D["부분 수신 or<br/>타임아웃 확인"]
+    B -->|Yes| C["상대방이 FIN 전송<br>(연결 종료)"]
+    B -->|No| D["부분 수신 or<br>타임아웃 확인"]
     
     C --> E{"connect()는 성공?"}
-    E -->|Yes| F["TCP는 성공,<br/>앱 레벨 거부"]
-    E -->|No| G["네트워크/방화벽<br/>문제"]
+    E -->|Yes| F["TCP는 성공,<br>앱 레벨 거부"]
+    E -->|No| G["네트워크/방화벽<br>문제"]
     
     F --> H{"성공/실패가 섞여있나?"}
-    H -->|Yes| I["리소스 경합<br/>(풀 크기, 동시 연결 제한)"]
-    H -->|No| J["전면 장애<br/>(서버 다운, 네트워크 단절)"]
+    H -->|Yes| I["리소스 경합<br>(풀 크기, 동시 연결 제한)"]
+    H -->|No| J["전면 장애<br>(서버 다운, 네트워크 단절)"]
     
     style I fill:#fff3cd,stroke:#856404
 ```

@@ -116,10 +116,10 @@ sequenceDiagram
 ```mermaid
 flowchart LR
     subgraph before["AS-IS"]
-        A["데이터 수집"] --> B["전처리<br/>(정규화, 인코딩)"] --> C["ML 추론 서비스"]
+        A["데이터 수집"] --> B["전처리<br>(정규화, 인코딩)"] --> C["ML 추론 서비스"]
     end
     subgraph after["TO-BE"]
-        D["데이터 수집"] --> E["all_feature_names에<br/>전부 넣어서 전달"] --> F["ML 추론 서비스<br/>(전처리는 모델 내부)"]
+        D["데이터 수집"] --> E["all_feature_names에<br>전부 넣어서 전달"] --> F["ML 추론 서비스<br>(전처리는 모델 내부)"]
     end
     style before fill:#f8d7da,stroke:#721c24
     style after fill:#d4edda,stroke:#155724
@@ -135,8 +135,8 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A["1. 클래스 속성 6종 정의"] --> B["2. settings.py에<br/>모델명 + ML 추론 서비스 엔드포인트 추가"]
-    B --> C["3. ml_model_registry<br/>테이블에 레코드 추가"]
+    A["1. 클래스 속성 6종 정의"] --> B["2. settings.py에<br>모델명 + ML 추론 서비스 엔드포인트 추가"]
+    B --> C["3. ml_model_registry<br>테이블에 레코드 추가"]
     C --> D["4. get_data_from_source() 구현"]
     D --> E["5. calculate_score() 구현"]
     E --> F["새 모델 동작 ✓"]

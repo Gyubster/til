@@ -107,12 +107,12 @@ Executing Step 3: 변경 사항 생성...
 
 ```mermaid
 flowchart TD
-    A["작업 요청"] --> B["Plan: 전체 계획 수립<br/>(LLM)"]
-    B --> C["Step 1: 요구사항 파싱<br/>(LLM - ReAct)"]
-    C --> D["Step 2: 영향도 분석<br/>(결정론적 코드)"]
-    D --> E["Step 3: 코드 수정<br/>(LLM - ReAct)"]
-    E --> F["Step 4: PR 생성<br/>(결정론적 코드)"]
-    F --> G{"계획 대비<br/>이상 있음?"}
+    A["작업 요청"] --> B["Plan: 전체 계획 수립<br>(LLM)"]
+    B --> C["Step 1: 요구사항 파싱<br>(LLM - ReAct)"]
+    C --> D["Step 2: 영향도 분석<br>(결정론적 코드)"]
+    D --> E["Step 3: 코드 수정<br>(LLM - ReAct)"]
+    E --> F["Step 4: PR 생성<br>(결정론적 코드)"]
+    F --> G{"계획 대비<br>이상 있음?"}
     G -->|Yes| H["계획 수정 후 재실행"]
     G -->|No| I["완료"]
     

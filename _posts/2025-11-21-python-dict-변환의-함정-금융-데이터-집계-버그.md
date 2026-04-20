@@ -38,10 +38,10 @@ payments = dict(
 
 ```mermaid
 flowchart TD
-    A["QuerySet.values_list() 결과"] --> B["[('2025-01', 150000),<br/>('2025-01', 163070),<br/>('2025-02', 154470)]"]
+    A["QuerySet.values_list() 결과"] --> B["[('2025-01', 150000),<br>('2025-01', 163070),<br>('2025-02', 154470)]"]
     B --> C["dict() 변환"]
-    C --> D["{'2025-01': 163070,<br/>'2025-02': 154470}"]
-    C --> E["⚠️ '2025-01'의 150000이<br/>163070으로 덮어써짐"]
+    C --> D["{'2025-01': 163070,<br>'2025-02': 154470}"]
+    C --> E["⚠️ '2025-01'의 150000이<br>163070으로 덮어써짐"]
     style E fill:#ff6b6b,stroke:#333,color:#fff
 ```
 
@@ -75,8 +75,8 @@ def health_insurance_payments(self):
 ```mermaid
 flowchart TD
     subgraph da["하나의 대출 신청"]
-        A["가심사 제출<br/>(제휴 페이 스크래핑)"]
-        B["자동심사 제출<br/>(공공 마이데이터)"]
+        A["가심사 제출<br>(제휴 페이 스크래핑)"]
+        B["자동심사 제출<br>(공공 마이데이터)"]
     end
     subgraph payments["Payment 테이블"]
         C["가심사 Payment 데이터"]
@@ -87,7 +87,7 @@ flowchart TD
     
     E["기존 쿼리: 전부 다 가져옴"] --> C
     E --> D
-    F["올바른 쿼리: 현재 심사의<br/>최신 제출 데이터만"] --> D
+    F["올바른 쿼리: 현재 심사의<br>최신 제출 데이터만"] --> D
     style E fill:#ff6b6b,stroke:#333,color:#fff
     style F fill:#51cf66,stroke:#333,color:#fff
 ```
@@ -130,10 +130,10 @@ flowchart LR
         B["2025-02: 163070 (현 직장 납부)"]
     end
     subgraph as_is["AS-IS: dict()"]
-        C["순서에 따라 하나만 남음<br/>(비결정적)"]
+        C["순서에 따라 하나만 남음<br>(비결정적)"]
     end
     subgraph to_be["TO-BE: 큰 값 선택"]
-        D["163070 선택<br/>(결정적)"]
+        D["163070 선택<br>(결정적)"]
     end
     input --> as_is
     input --> to_be
