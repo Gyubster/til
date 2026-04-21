@@ -41,6 +41,7 @@ flowchart TD
     E -->|"데이터 도착"| C
     E -->|"10초 타임아웃 초과"| F["socket.timeout 예외"]
     E -->|"상대방이 FIN 전송"| G["b'' 반환 (빈 바이트)"]
+    style G fill:#ff6b6b,stroke:#333,color:#fff
 ```
 
 **핵심 구분:**
@@ -89,6 +90,7 @@ flowchart TD
     A["5번째 연결 요청"] --> B["TCP 핸드셰이크 수용<br>(connect 성공)"]
     B --> C["즉시 FIN 전송<br>(연결 종료)"]
     C --> D["클라이언트 recv() → b''"]
+    style D fill:#ff6b6b,stroke:#333,color:#fff
 ```
 
 **판정: 유력**
@@ -153,6 +155,7 @@ flowchart TD
         D["요청 D → 슬롯 4"] --> D1["처리 중..."]
         E["요청 E → 풀 가득"] --> E1["FIN → b'' ✗"]
     end
+    style E1 fill:#ff6b6b,stroke:#333,color:#fff
 ```
 
 기존 연결이 슬롯을 아직 점유하고 있을 때 새 연결이 도착하면, 일부는 성공하고 일부는 실패한다. 이것이 "간헐적 실패"의 원인이었다.
@@ -192,7 +195,7 @@ flowchart TD
     F --> H{"성공/실패가 섞여있나?"}
     H -->|Yes| I["리소스 경합<br>(풀 크기, 동시 연결 제한)"]
     H -->|No| J["전면 장애<br>(서버 다운, 네트워크 단절)"]
-    
+    style I fill:#fff3cd,stroke:#856404
 ```
 
 ---

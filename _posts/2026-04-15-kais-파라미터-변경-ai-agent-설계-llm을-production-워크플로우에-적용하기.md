@@ -52,7 +52,10 @@ flowchart TD
     B --> C["영향도 탐색"]
     C --> D["코드 수정"]
     D --> E["PR 생성 + 리뷰어 할당"]
-
+    style B fill:#e8daef,stroke:#6c3483
+    style D fill:#e8daef,stroke:#6c3483
+    style C fill:#d5f5e3,stroke:#1e8449
+    style E fill:#d5f5e3,stroke:#1e8449
 ```
 
 | 단계 | 처리 방식 | 이유 |
@@ -104,6 +107,7 @@ flowchart TD
 
     G["운영자가 PR 검토"] --> H["머지 + 배포"]
     F --> G
+    style G fill:#fff3cd,stroke:#856404
 ```
 
 핵심 설계 원칙:
