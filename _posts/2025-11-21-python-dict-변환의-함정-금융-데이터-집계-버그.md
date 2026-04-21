@@ -42,7 +42,6 @@ flowchart TD
     B --> C["dict() 변환"]
     C --> D["{'2025-01': 163070,<br>'2025-02': 154470}"]
     C --> E["⚠️ '2025-01'의 150000이<br>163070으로 덮어써짐"]
-    style E fill:#ff6b6b,stroke:#333,color:#fff
 ```
 
 `dict()`에 동일 키의 튜플을 전달하면 **나중에 나온 값이 이전 값을 덮어쓴다.** 건강보험 데이터에서는 같은 월(payment_month)에 여러 데이터가 존재할 수 있다:
@@ -88,8 +87,6 @@ flowchart TD
     E["기존 쿼리: 전부 다 가져옴"] --> C
     E --> D
     F["올바른 쿼리: 현재 심사의<br>최신 제출 데이터만"] --> D
-    style E fill:#ff6b6b,stroke:#333,color:#fff
-    style F fill:#51cf66,stroke:#333,color:#fff
 ```
 
 가심사와 자동심사의 데이터가 섞여서 QuerySet에 들어오고, `dict()` 변환 시 순서에 따라 어떤 값이 살아남는지가 달라졌다.
@@ -137,8 +134,6 @@ flowchart LR
     end
     input --> as_is
     input --> to_be
-    style as_is fill:#ff6b6b,stroke:#333,color:#fff
-    style to_be fill:#51cf66,stroke:#333,color:#fff
 ```
 
 **왜 큰 값?** 겸직(두 직장 동시 납부)의 경우 소득이 높은 직장 기준으로 보는 것이 보수적이며, 환급(-금액)보다 실제 납부 금액이 더 의미 있는 데이터이기 때문이다.

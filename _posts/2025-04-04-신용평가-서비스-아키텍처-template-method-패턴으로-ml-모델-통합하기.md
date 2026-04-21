@@ -80,7 +80,6 @@ flowchart TD
         F["calculate_score: 점수 계산"]
     end
     A --> E --> F --> B
-    style override fill:#fff3cd,stroke:#856404
 ```
 
 `get_data_from_source()`와 `calculate_score()`만 구현하면 새 모델이 동작한다. 나머지는 부모 클래스가 처리한다.
@@ -121,8 +120,6 @@ flowchart LR
     subgraph after["TO-BE"]
         D["데이터 수집"] --> E["all_feature_names에<br>전부 넣어서 전달"] --> F["ML 추론 서비스<br>(전처리는 모델 내부)"]
     end
-    style before fill:#f8d7da,stroke:#721c24
-    style after fill:#d4edda,stroke:#155724
 ```
 
 결정: `all_feature_names`에 파라미터를 전부 넣어 보내고, 전처리는 ML 추론 서비스 모델 내부에서 처리한다. 서비스 레이어는 "데이터를 모아서 보내는 것"에만 집중한다.

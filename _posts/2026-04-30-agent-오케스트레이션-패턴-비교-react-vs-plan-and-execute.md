@@ -116,10 +116,6 @@ flowchart TD
     G -->|Yes| H["계획 수정 후 재실행"]
     G -->|No| I["완료"]
     
-    style C fill:#e8daef,stroke:#6c3483
-    style E fill:#e8daef,stroke:#6c3483
-    style D fill:#d5f5e3,stroke:#1e8449
-    style F fill:#d5f5e3,stroke:#1e8449
 ```
 
 | 단계 | 패턴 | 이유 |
