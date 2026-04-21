@@ -26,6 +26,13 @@
   }
 }
 
+// Mermaid: 렌더링 후 원본 코드 블록 숨기기
+pre:has(+ .mermaid),
+pre.mermaid-pre,
+.language-mermaid {
+  display: none !important;
+}
+
 // 홈 포스트 목록
 .post-preview {
   .post-content {
