@@ -5,17 +5,29 @@
   .post-content h3 { font-size: 1.2rem; }
   .post-content h4 { font-size: 1.05rem; }
 
-  /* 사이드바 중앙 정렬 */
-  #sidebar .profile-wrapper { text-align: center; }
-  #sidebar .site-title { text-align: center !important; }
-  #sidebar .site-subtitle { text-align: center !important; font-size: 0.85rem; }
+  /* 사이드바 프로필 중앙 정렬 */
+  #sidebar .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #sidebar .site-title {
+    text-align: center !important;
+    width: 100%;
+  }
+  #sidebar .site-subtitle {
+    text-align: center !important;
+    width: 100%;
+  }
 
-  /* 사이드바 하단 고정 */
+  /* 사이드바 하단 고정 + 중앙 정렬 */
   #sidebar .sidebar-bottom {
     position: absolute;
     bottom: 2rem;
     left: 0;
     width: 100%;
+    justify-content: center;
   }
 
   /* Mermaid 코드 블록 숨기기 */
