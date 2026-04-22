@@ -16,13 +16,18 @@
   }
 }
 
-// 사이드바 폰트
+// 사이드바 폰트 + 중앙 정렬
 .sidebar {
   .site-title {
     font-size: 1.3rem;
+    text-align: center;
   }
   .site-subtitle {
     font-size: 0.85rem;
+    text-align: center;
+  }
+  .profile-wrapper {
+    text-align: center;
   }
 }
 
