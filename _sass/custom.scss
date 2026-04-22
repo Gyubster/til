@@ -33,6 +33,17 @@ pre.mermaid-pre,
   display: none !important;
 }
 
+// 사이드바 하단 아이콘(다크모드, GitHub, 이메일)을 하단 고정
+.sidebar {
+  .sidebar-bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
 // 홈 포스트 목록
 .post-preview {
   .post-content {
