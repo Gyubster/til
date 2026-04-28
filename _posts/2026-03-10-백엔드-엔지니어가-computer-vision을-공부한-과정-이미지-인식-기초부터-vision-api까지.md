@@ -2,7 +2,7 @@
 title: "백엔드 엔지니어가 Computer Vision을 공부하려면 - 이미지 인식 기초부터 Vision API까지"
 date: 2026-03-10
 categories: [CS Fundamentals]
-tags: [computer-vision, deep-learning, cnn, vision-api, study-log]
+tags: [computer-vision, vision-api, study-log]
 mermaid: true
 ---
 

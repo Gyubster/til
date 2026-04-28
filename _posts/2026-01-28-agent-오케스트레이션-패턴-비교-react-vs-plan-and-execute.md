@@ -2,7 +2,7 @@
 title: "Agent 오케스트레이션 패턴 비교 - ReAct vs Plan-and-Execute"
 date: 2026-01-28
 categories: [System Design]
-tags: [ai-agent, orchestration, langchain, react, architecture]
+tags: [ai-agent, architecture]
 mermaid: true
 ---
 

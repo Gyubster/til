@@ -2,7 +2,7 @@
 title: "신용평가 서비스 아키텍처 - Template Method 패턴으로 ML 모델 통합하기"
 date: 2025-04-04
 categories: [System Design]
-tags: [architecture, design-pattern, ml, django]
+tags: [architecture, ml, django]
 mermaid: true
 ---
 

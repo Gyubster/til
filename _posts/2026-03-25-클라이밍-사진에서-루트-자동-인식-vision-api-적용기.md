@@ -2,7 +2,7 @@
 title: "클라이밍 사진에서 루트 자동 인식 - Vision API로 할 수 있을까?"
 date: 2026-03-25
 categories: [Engineering Notes]
-tags: [vision-api, image-recognition, ai, side-project, climbing]
+tags: [vision-api, computer-vision, ai, side-project]
 mermaid: true
 ---
 
