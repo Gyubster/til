@@ -1,6 +1,6 @@
 ---
 title: "Claude Code를 일상 워크플로우에 통합한 1년의 기록"
-date: 2026-05-03
+date: 2026-03-05
 categories: [Engineering Notes]
 tags: [claude-code, ai, developer-tools, workflow, productivity]
 mermaid: true

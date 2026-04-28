@@ -1,6 +1,6 @@
 ---
 title: "LLM 기반 개인 에이전트 설계기 - LifeRPG 아키텍처와 설계 결정"
-date: 2026-05-05
+date: 2026-03-15
 categories: [System Design]
 tags: [llm, ai-agent, side-project, claude-api, architecture]
 mermaid: true
