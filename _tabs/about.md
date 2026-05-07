@@ -1,6 +1,8 @@
 ---
 icon: fas fa-info-circle
 order: 4
+lang: ko
+ref: about
 ---
 
 ## 심규보 / Backend Engineer

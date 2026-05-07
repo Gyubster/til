@@ -3,6 +3,13 @@ theme: jekyll-theme-chirpy
 lang: ko
 timezone: Asia/Seoul
 
+# Polyglot 다국어 설정
+languages: ["ko", "en"]
+default_lang: "ko"
+exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
+parallel_localization: false
+lang_from_path: true
+
 title: "gyubo.dev"
 tagline: "백엔드 엔지니어의 실전 기록"
 description: >-
@@ -52,6 +59,10 @@ kramdown:
       line_numbers: true
       start_line: 1
 
+sass:
+  style: compressed
+  sourcemap: never
+
 collections:
   tabs:
     output: true
@@ -77,9 +88,6 @@ defaults:
       layout: page
       permalink: /:title/
 
-sass:
-  style: compressed
-
 compress_html:
   clippings: all
   comments: all
@@ -94,17 +102,16 @@ plugins:
   - jekyll-archives
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-polyglot
 
 exclude:
-  - "*.gem"
-  - "*.gemspec"
+  - Gemfile
+  - Gemfile.lock
   - docs
   - tools
   - README.md
   - LICENSE
-  - purgecss.js
-  - "*.config.js"
-  - "package*.json"
+  - node_modules
 
 jekyll-archives:
   enabled: [categories, tags]
