@@ -33,36 +33,8 @@
   /* Mermaid 코드 블록 숨기기 */
   pre:has(+ .mermaid) { display: none !important; }
   .highlight .language-mermaid { display: none !important; }
-</style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
-
-  // 영문 페이지: tagline 변경
-  if (isEn) {
-    var subtitle = document.querySelector('.site-subtitle');
-    if (subtitle) subtitle.textContent = "A Backend Engineer's Field Notes";
-  }
-
-  // 언어 전환 버튼을 사이드바 하단에 추가
-  var sidebarBottom = document.querySelector('#sidebar .sidebar-bottom');
-  if (sidebarBottom) {
-    var langBtn = document.createElement('a');
-    langBtn.className = 'lang-switch-btn';
-    if (isEn) {
-      langBtn.href = window.location.pathname.replace(/^\/en\//, '/').replace(/^\/en$/, '/');
-      langBtn.textContent = '🇰🇷 한국어';
-    } else {
-      langBtn.href = '/en' + window.location.pathname;
-      langBtn.textContent = '🇺🇸 English';
-    }
-    sidebarBottom.insertBefore(langBtn, sidebarBottom.firstChild);
-  }
-});
-</script>
-
-<style>
+  /* 언어 전환 버튼 */
   .lang-switch-btn {
     display: block;
     text-align: center;
@@ -79,7 +51,40 @@ document.addEventListener('DOMContentLoaded', function() {
     margin-left: auto;
     margin-right: auto;
   }
-  .lang-switch-btn:hover {
-    opacity: 1;
-  }
+  .lang-switch-btn:hover { opacity: 1; }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var isEn = path.startsWith('/en/') || path === '/en';
+
+  // 영문 페이지: tagline 변경
+  if (isEn) {
+    var subtitle = document.querySelector('.site-subtitle');
+    if (subtitle) subtitle.textContent = "A Backend Engineer's Field Notes";
+  }
+
+  // 언어 전환 버튼
+  var sidebarBottom = document.querySelector('#sidebar .sidebar-bottom');
+  if (sidebarBottom) {
+    var langBtn = document.createElement('a');
+    langBtn.className = 'lang-switch-btn';
+
+    if (isEn) {
+      // 영문 → 한글: /en/ 프리픽스 제거
+      var koPath = path.replace(/^\/en(\/|$)/, '/');
+      if (koPath === '') koPath = '/';
+      langBtn.href = koPath;
+      langBtn.textContent = '🇰🇷 한국어';
+    } else {
+      // 한글 → 영문: /en/ 프리픽스 추가
+      var enPath = '/en' + (path === '/' ? '/' : path);
+      langBtn.href = enPath;
+      langBtn.textContent = '🇺🇸 English';
+    }
+
+    sidebarBottom.insertBefore(langBtn, sidebarBottom.firstChild);
+  }
+});
+</script>
