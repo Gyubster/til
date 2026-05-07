@@ -1,27 +1,16 @@
 <style>
-  /* 본문 폰트 사이즈 */
   .post-content { font-size: 0.95rem; line-height: 1.8; }
   .post-content h2 { font-size: 1.4rem; }
   .post-content h3 { font-size: 1.2rem; }
   .post-content h4 { font-size: 1.05rem; }
-
-  /* 사이드바 프로필 중앙 정렬 */
   #sidebar .profile-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  #sidebar .site-title {
-    text-align: center !important;
-    width: 100%;
-  }
-  #sidebar .site-subtitle {
-    text-align: center !important;
-    width: 100%;
-  }
-
-  /* 사이드바 하단 고정 + 중앙 정렬 */
+  #sidebar .site-title { text-align: center !important; width: 100%; }
+  #sidebar .site-subtitle { text-align: center !important; width: 100%; }
   #sidebar .sidebar-bottom {
     position: absolute;
     bottom: 2rem;
@@ -29,12 +18,8 @@
     width: 100%;
     justify-content: center;
   }
-
-  /* Mermaid 코드 블록 숨기기 */
   pre:has(+ .mermaid) { display: none !important; }
   .highlight .language-mermaid { display: none !important; }
-
-  /* 언어 전환 버튼 */
   .lang-switch-btn {
     display: block;
     text-align: center;
@@ -60,18 +45,15 @@
   var isEn = path.startsWith('/en/') || path === '/en';
 
   function addLangButton() {
-    if (document.querySelector('.lang-switch-btn')) return; // 중복 방지
-
+    if (document.querySelector('.lang-switch-btn')) return;
     var sidebarBottom = document.querySelector('#sidebar .sidebar-bottom');
     if (!sidebarBottom) return;
 
-    // 영문 페이지: tagline 변경
     if (isEn) {
       var subtitle = document.querySelector('.site-subtitle');
       if (subtitle) subtitle.textContent = "A Backend Engineer's Field Notes";
     }
 
-    // 언어 전환 버튼
     var langBtn = document.createElement('a');
     langBtn.className = 'lang-switch-btn';
 
@@ -89,7 +71,6 @@
     sidebarBottom.insertBefore(langBtn, sidebarBottom.firstChild);
   }
 
-  // 여러 시점에서 시도
   document.addEventListener('DOMContentLoaded', addLangButton);
   window.addEventListener('load', addLangButton);
   setTimeout(addLangButton, 500);
