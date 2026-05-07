@@ -2,6 +2,4 @@
 layout: tags
 icon: fas fa-tags
 order: 2
-lang: ko
-ref: tags
 ---
