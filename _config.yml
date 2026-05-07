@@ -15,6 +15,11 @@ tagline: "백엔드 엔지니어의 실전 기록"
 description: >-
   백엔드 엔지니어 심규보의 기술 블로그. 시스템 설계, 장애 대응, 리팩토링 등 실무에서 배운 것들을 기록합니다.
 
+en:
+  tagline: "A Backend Engineer's Field Notes"
+  description: >-
+    David Gyubo Shim's tech blog. Documenting lessons from system design, incident response, and refactoring in production.
+
 url: "https://gyubster.github.io"
 baseurl: ""
 

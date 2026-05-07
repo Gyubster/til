@@ -34,3 +34,13 @@
   pre:has(+ .mermaid) { display: none !important; }
   .highlight .language-mermaid { display: none !important; }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') {
+    // 영문 페이지: tagline 변경
+    var subtitle = document.querySelector('.site-subtitle');
+    if (subtitle) subtitle.textContent = "A Backend Engineer's Field Notes";
+  }
+});
+</script>
