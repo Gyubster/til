@@ -140,7 +140,7 @@ sequenceDiagram
     Note over C: raise InvalidHeaderError
 ```
 
-**핵심 포인트**: `connect()`와 `sendall()`이 모두 성공하기 때문에 네트워크 문제가 아닌 것처럼 보인다. 하지만 **TCP 핸드셰이크(OS 커널 레벨)와 애플리케이션 레벨 수용은 별개**다.
+**요점**: `connect()`와 `sendall()`이 모두 성공하기 때문에 네트워크 문제가 아닌 것처럼 보인다. 하지만 **TCP 핸드셰이크(OS 커널 레벨)와 애플리케이션 레벨 수용은 별개**다.
 
 ---
 
